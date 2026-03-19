@@ -7,9 +7,10 @@ payload = {
     'username': 'admin',
     'pass': 'Admin@2024'
 }
-cookie = {'PHPSESSID': 'dcdc37b54552a00548e377bbb5427cb2'}
+cookie = {'PHPSESSID': '3dab531fd6ea3de5963f1da5c26c10ae'}
 
 # create data frame for each districts status URL
+DIR = input("Enter directory path to save the report: ")
 # Excel file name
 FILE_NAME = input("Enter file name: ")
 # URL for report page
@@ -70,7 +71,7 @@ report_cols = []
 report_data = []
 df_report_data = pd.DataFrame()
 # excel to write report
-exl_writer = pd.ExcelWriter("..//Reports/" + FILE_NAME + "_" + QUATER + ".xlsx",
+exl_writer = pd.ExcelWriter(DIR + FILE_NAME + "_" + QUATER + ".xlsx",
                             engine='xlsxwriter',
                             engine_kwargs={'options':{'strings_to_numbers': True}})
 # get the generated excel workbook
