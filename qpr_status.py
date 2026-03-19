@@ -8,10 +8,11 @@ payload = {
     'username': 'admin',
     'pass': 'Admin@2024'
 }
-cookie = {'PHPSESSID': '63f1f8f265dcfdaeb386022700a371af'}
+cookie = {'PHPSESSID': '7bb8622276757290a9ef7cf4f2b1c9ef'}
 report_status = {'Submitted', 'Pending'}
 # load QPR status base data
-df_qpr_status_base = pd.read_excel("../QPR_Status_Bases.xlsx")
+working_dir_path = input("Enter directory path for QPR status base data: ")
+df_qpr_status_base = pd.read_excel(working_dir_path + "/QPR_Status_Bases.xlsx")
 # drop serial column
 del df_qpr_status_base["Unnamed: 0"]
 
@@ -76,4 +77,4 @@ for r in range(0,df_dist_status.index.size):
         else:
             df_dist_status.iloc[r, c] = "NA"
 # write to excel file
-df_dist_status.to_excel("../QPR_Status.xlsx")
+df_dist_status.to_excel(working_dir_path + "/QPR_Status.xlsx")

@@ -7,7 +7,7 @@ payload = {
     'username': 'admin',
     'pass': 'Admin@2024'
 }
-cookie = {'PHPSESSID': '3dab531fd6ea3de5963f1da5c26c10ae'}
+cookie = {'PHPSESSID': '7bb8622276757290a9ef7cf4f2b1c9ef'}
 
 # create data frame for each districts status URL
 DIR = input("Enter directory path to save the report: ")
